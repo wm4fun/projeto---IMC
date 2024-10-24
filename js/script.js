@@ -39,6 +39,10 @@ const form = document.querySelector('form')
 const inputWeight = document.querySelector('#weight')
 const inputHeight = document.querySelector('#height')
 
+// eventos
+inputWeight.oninput = () => AlertError.close()
+inputHeight.oninput = () => AlertError.close()
+
 form.onsubmit = event => {
     event.preventDefault() // evite o padrão de enviar o formulário e recarregar a página
     
@@ -64,7 +68,6 @@ function displayResultMessage(result) {
     Modal.message.innerText = message
     Modal.open()
 }
-
 
 
 
